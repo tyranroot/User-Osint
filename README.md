@@ -1,10 +1,12 @@
 ```
- ██████╗ ███████╗██╗███╗   ██╗████████╗
-██╔═══██╗██╔════╝██║████╗  ██║╚══██╔══╝
-██║   ██║███████╗██║██╔██╗ ██║   ██║   
-██║   ██║╚════██║██║██║╚██╗██║   ██║   
-╚██████╔╝███████║██║██║ ╚████║   ██║   
- ╚═════╝ ╚══════╝╚═╝╚═╝  ╚═══╝   ╚═╝  
+                               _    _                  ____   _____ _       _   
+                              | |  | |                / __ \ / ____(_)     | |  
+                              | |  | |______ _ __  | |  | | (___  _ _ __ | |_ 
+                              | |  | / __|/ _ \ '__| | |  | |\___ \| | '_ \| __|  
+                              | |__| \__ \  __/ |    | |__| |____) | | | | | |_ 
+                               \____/|___/\___|_|     \____/|_____/|_|_| |_|\__|
+                                                   
+                                                   
 ```
 
 <div align="center">
@@ -51,71 +53,8 @@ cd username-osint
 pip install -r requirements.txt
 ```
 
-### Method 2 — pip
 
-```bash
-pip install username-osint
-```
 
-### Method 3 — Docker (Isolated Environment)
-
-```bash
-docker build -t username-osint .
-docker run --rm username-osint scan -u target_username
-```
-
----
-
-## 🚀 Usage
-
-### Basic Scan
-
-```bash
-python osint.py -u john_doe
-```
-
-### Export to JSON
-
-```bash
-python osint.py -u john_doe --output json --save results.json
-```
-
-### Scan by Category
-
-```bash
-python osint.py -u john_doe --category social,gaming,forums
-```
-
-### Anonymous Mode (Tor / Proxy)
-
-```bash
-python osint.py -u john_doe -v --proxy socks5://127.0.0.1:9050
-```
-
-### Verbose + Custom Timeout
-
-```bash
-python osint.py -u john_doe -v --timeout 10 --threads 100
-```
-
----
-
-## 🏴 CLI Flags Reference
-
-| Flag | Description | Default |
-|------|-------------|---------|
-| `-u, --username` | 🎯 Target username | **required** |
-| `--output` | Output format: `text` / `json` / `csv` | `text` |
-| `--save` | Save results to file | `None` |
-| `--category` | Filter: `social`, `gaming`, `forums`, `dev`, `dark` | `all` |
-| `--proxy` | Proxy URL (`socks5://` or `http://`) | `None` |
-| `--timeout` | Request timeout (seconds) | `5` |
-| `--threads` | Max concurrent requests | `50` |
-| `-v, --verbose` | Show all results (including misses) | `False` |
-| `--csv` | Export to CSV format | `False` |
-| `--tor` | Route through Tor network | `False` |
-
----
 
 ## 🗂️ Platform Coverage
 
@@ -145,22 +84,6 @@ python osint.py -u john_doe -v --timeout 10 --threads 100
 
 ---
 
-## 🗃️ Project Structure
-
-```
-username-osint/
-├── osint.py            # Main entry point
-├── sites.json          # Platform database (100+ entries)
-├── requirements.txt    # Python dependencies
-├── Dockerfile          # Docker build file
-├── core/
-│   ├── scanner.py      # Async HTTP scanner engine
-│   ├── reporter.py     # Output formatter (JSON/CSV/text)
-│   └── proxy.py        # Proxy / Tor handler
-├── tests/
-│   └── test_scanner.py # Unit tests
-└── README.md
-```
 
 ---
 
@@ -190,16 +113,8 @@ pytest tests/
 
 ---
 
-## 📦 Dependencies
 
-```
-aiohttp>=3.8.0
-asyncio
-requests
-colorama
-rich
-tqdm
-```
+
 
 ---
 
