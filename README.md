@@ -48,9 +48,11 @@ Built for:
 ### Method 1 — Git Clone (Recommended)
 
 ```bash
-git clone https://github.com/yourname/username-osint
-cd username-osint
-pip install -r requirements.txt
+pkg update -y
+git clone https://github.com/tyranroot/User-Osint.git
+cd User-Osint
+pip3 install colorama
+python3 User-Osint.py
 ```
 
 
