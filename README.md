@@ -90,37 +90,6 @@ python3 User-Osint.py
 
 ---
 
-## 🔧 Adding New Sites
-
-Edit `sites.json` to add custom platforms:
-
-```json
-"SiteName": {
-  "url": "https://example.com/{}",
-  "errorType": "status_code",
-  "errorCode": 404,
-  "category": "social"
-}
-```
-
-**Error types supported:**
-- `status_code` — checks HTTP response code
-- `message` — checks for error string in body
-- `response_url` — checks for redirect pattern
-
-Then run tests:
-
-```bash
-pytest tests/
-```
-
----
-
-
-
-
----
-
 ## 🤝 Contributing
 
 Pull requests are welcome!
@@ -157,7 +126,7 @@ Pull requests are welcome!
 ## 📜 License
 
 ```
-MIT License — © 2025 @yourhandle
+MIT License — © 2026 @tyranroot
 Permission granted for personal, educational, and research use.
 ```
 
