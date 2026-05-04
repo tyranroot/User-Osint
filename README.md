@@ -52,6 +52,7 @@ pkg update -y
 git clone https://github.com/tyranroot/User-Osint.git
 cd User-Osint
 pip3 install colorama
+pip3 install requests
 python3 User-Osint.py
 ```
 
